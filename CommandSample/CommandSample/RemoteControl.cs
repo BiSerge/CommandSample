@@ -1,14 +1,22 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+using CommandSample.Commands;
 
 namespace CommandSample
 {
     class RemoteControl
     {
         public string input = "";
+
+        private Dictionary<string, ICommand> _commands;
+
+        public RemoteControl()
+        {
+            _commands = new Dictionary<string, ICommand>();
+            _commands.Add("1", new LightCommand());
+            _commands.Add("3", new TvCommand());
+            _commands.Add("5", new MusicCommand());
+        }
 
         public void DrawMenu()
         {
@@ -30,30 +38,19 @@ namespace CommandSample
 
             switch (input)
             {
-                case "1":
-                    TurnLightOn();
-                    break;
                 case "2":
                     TurnLightOff();
                     break;
-                case "3":
-                    TurnTvOn();
-                    break;
                 case "4":
                     TurnTvOff();
-                    break;
-                case "5":
-                    TurnMusicOn();
                     break;
                 case "6":
                     TurnMusicOff();
                     break;
             }
-        }
 
-        private void TurnLightOn()
-        {
-            Console.WriteLine("Свет включен");
+            if (_commands.ContainsKey(input))
+                _commands[input].Execute();
         }
 
         private void TurnLightOff()
@@ -61,19 +58,9 @@ namespace CommandSample
             Console.WriteLine("Свет выключен");
         }
 
-        private void TurnTvOn()
-        {
-            Console.WriteLine("Телевизор включен");
-        }
-
         private void TurnTvOff()
         {
             Console.WriteLine("Телевизор выключен");
-        }
-
-        private void TurnMusicOn()
-        {
-            Console.WriteLine("Музыка включена");
         }
 
         private void TurnMusicOff()
