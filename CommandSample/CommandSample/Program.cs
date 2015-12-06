@@ -10,6 +10,14 @@ namespace CommandSample
     {
         static void Main(string[] args)
         {
+            var remote = new RemoteControl();
+            do
+            {
+                remote.DrawMenu();
+                remote.PerfomAction();
+
+                Console.WriteLine();
+            } while (remote.input != "0"); //while (userInput == "y");
         }
     }
 }

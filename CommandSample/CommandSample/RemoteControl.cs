@@ -8,6 +8,8 @@ namespace CommandSample
 {
     class RemoteControl
     {
+        public string input = "";
+
         public void DrawMenu()
         {
             Console.WriteLine("Выбирете вариант ниже:");
@@ -24,7 +26,7 @@ namespace CommandSample
         public void PerfomAction()
         {
             Console.Write("Ваш выбор: ");
-            var input = Console.ReadLine();
+            input = Console.ReadLine();
 
             switch (input)
             {
@@ -51,32 +53,32 @@ namespace CommandSample
 
         private void TurnLightOn()
         {
-
+            Console.WriteLine("Свет включен");
         }
 
         private void TurnLightOff()
         {
-
+            Console.WriteLine("Свет выключен");
         }
 
         private void TurnTvOn()
         {
-
+            Console.WriteLine("Телевизор включен");
         }
 
         private void TurnTvOff()
         {
-
+            Console.WriteLine("Телевизор выключен");
         }
 
         private void TurnMusicOn()
         {
-
+            Console.WriteLine("Музыка включена");
         }
 
         private void TurnMusicOff()
         {
-
+            Console.WriteLine("Музыка выключена");
         }
     }
 }
