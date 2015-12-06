@@ -8,5 +8,10 @@ namespace CommandSample.Commands
         {
             Console.WriteLine("Музыка включена");
         }
+
+        public override string ToString()
+        {
+            return "Включить музыку";
+        }
     }
 }

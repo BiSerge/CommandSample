@@ -8,5 +8,10 @@ namespace CommandSample.Commands
         {
             Console.WriteLine("Телевизор включен");
         }
+
+        public override string ToString()
+        {
+            return "Включить телевизор";
+        }
     }
 }

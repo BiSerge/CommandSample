@@ -8,5 +8,10 @@ namespace CommandSample.Commands
         {
             Console.WriteLine("Свет включен");
         }
+        public override string ToString()
+        {
+            return "Включить свет";
+        }
+
     }
 }
