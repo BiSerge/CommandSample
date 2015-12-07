@@ -3,24 +3,23 @@ using CommandSample.ControlledSystems;
 
 namespace CommandSample.Commands
 {
-    public class LightCommand : ICommand
+    public class TeapodCommand : ICommand
     {
-        private Light _light;
+        private Teapod _teapod;
 
-        public LightCommand(Light light)
+        public TeapodCommand(Teapod teapod)
         {
-            _light = light;
+            teapod = _teapod;
         }
 
         public void Execute()
         {
-            _light.TurnOn();
+            _teapod.TurnOn();
         }
 
         public override string ToString()
         {
-            return "Включить свет";
+            return "Включить чайник";
         }
-
     }
 }

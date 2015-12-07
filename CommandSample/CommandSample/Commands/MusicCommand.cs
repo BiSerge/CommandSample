@@ -1,12 +1,20 @@
 ﻿using System;
+using CommandSample.ControlledSystems;
 
 namespace CommandSample.Commands
 {
     public class MusicCommand : ICommand
     {
+        private Music _music;
+
+        public MusicCommand(Music music)
+        {
+            _music = music;
+        }
+
         public void Execute()
         {
-            Console.WriteLine("Музыка включена");
+            _music.TurnOn();
         }
 
         public override string ToString()
