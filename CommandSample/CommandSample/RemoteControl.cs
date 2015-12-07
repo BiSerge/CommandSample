@@ -21,11 +21,14 @@ namespace CommandSample
         public void DrawMenu()
         {
             Console.WriteLine("Выбирете вариант ниже:");
-            Console.WriteLine("1 \t- Включить свет");
+
+            foreach (var buttonId in _commands.Keys)
+            {
+                Console.WriteLine("{0} \t- {1}", buttonId, _commands[buttonId]);
+            }
+
             Console.WriteLine("2 \t- Выключить свет");
-            Console.WriteLine("3 \t- Включить телевизор");
             Console.WriteLine("4 \t- Выключить телевизор");
-            Console.WriteLine("5 \t- Включить музыку");
             Console.WriteLine("6 \t- Выключить музыку");
             Console.WriteLine("0 \t- Выход");
             Console.WriteLine();
@@ -51,6 +54,11 @@ namespace CommandSample
 
             if (_commands.ContainsKey(input))
                 _commands[input].Execute();
+        }
+
+        public void SetCommandForButton(string buttonId, ICommand cmd)
+        {
+            _commands[buttonId] = cmd;
         }
 
         private void TurnLightOff()
