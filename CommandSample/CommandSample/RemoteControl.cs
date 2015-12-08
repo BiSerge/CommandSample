@@ -22,6 +22,12 @@ namespace CommandSample
                 _commands[buttonId].Execute();
         }
 
+        public void UndoButton(int buttonId)
+        {
+            if (_commands.ContainsKey(buttonId))
+                _commands[buttonId].Undo();
+        }
+
         public void SetCommandForButton(int buttonId, ICommand cmd)
         {
             _commands[buttonId] = cmd;

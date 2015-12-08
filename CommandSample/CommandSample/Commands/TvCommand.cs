@@ -17,6 +17,11 @@ namespace CommandSample.Commands
             _tv.TurnOn();
         }
 
+        public void Undo()
+        {
+            _tv.TurnOff();
+        }
+
         public override string ToString()
         {
             return "Включить телевизор";

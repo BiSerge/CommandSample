@@ -16,9 +16,9 @@ namespace CommandSample
             string userInput = "";
 
             remote.SetCommandForButton(1, new LightCommand(new Light()));
-            remote.SetCommandForButton(3, new TvCommand(new Tv()));
-            remote.SetCommandForButton(5, new MusicCommand(new Music()));
-            remote.SetCommandForButton(7, new TeapodCommand(new Teapod()));
+            remote.SetCommandForButton(2, new TvCommand(new Tv()));
+            remote.SetCommandForButton(3, new MusicCommand(new Music()));
+            remote.SetCommandForButton(4, new TeapodCommand(new Teapod()));
 
             do
             {
@@ -31,6 +31,9 @@ namespace CommandSample
                 int.TryParse(input, out buttonId);
 
                 remote.PushButton(buttonId);
+                remote.PushButton(buttonId);
+                remote.PushButton(buttonId);
+                remote.UndoButton(buttonId);
 
                 Console.WriteLine("\n Хотите продолжить (Y/N): ");
                 userInput = Console.ReadLine();

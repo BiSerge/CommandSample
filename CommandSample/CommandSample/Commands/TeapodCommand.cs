@@ -17,6 +17,11 @@ namespace CommandSample.Commands
             _teapod.TurnOn();
         }
 
+        public void Undo()
+        {
+            _teapod.TurnOff();
+        }
+
         public override string ToString()
         {
             return "Включить чайник";

@@ -17,6 +17,11 @@ namespace CommandSample.Commands
             _music.TurnOn();
         }
 
+        public void Undo()
+        {
+            _music.TurnOff();
+        }
+
         public override string ToString()
         {
             return "Включить музыку";
