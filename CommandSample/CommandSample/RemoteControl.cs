@@ -31,7 +31,7 @@ namespace CommandSample
         {
             var sb = new StringBuilder();
             foreach (var buttonId in _commands.Keys)
-                sb.AppendFormat("{0} \t- {1}", buttonId, _commands[buttonId]);
+                sb.AppendFormat("{0} \t- {1}\n", buttonId, _commands[buttonId]);
 
             sb.Append("Проч. \t- Выход");
 
