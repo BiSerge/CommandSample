@@ -20,6 +20,12 @@ namespace CommandSample
             remote.SetCommandForButton(3, new MusicCommand(new Music()));
             remote.SetCommandForButton(4, new TeapodCommand(new Teapod()));
 
+            var teapodCommand = new TeapodCommand(new Teapod());
+            var tvCommand = new TvCommand(new Tv());
+            var macroCommand = new MacroCommand(new List<ICommand> { teapodCommand, tvCommand });
+
+            remote.SetCommandForButton(5, macroCommand);
+
             do
             {
                 Console.WriteLine("Выбирете вариант ниже:");
@@ -31,9 +37,15 @@ namespace CommandSample
                 int.TryParse(input, out buttonId);
 
                 remote.PushButton(buttonId);
-                remote.PushButton(buttonId);
-                remote.PushButton(buttonId);
+                //remote.PushButton(buttonId);
+                //remote.PushButton(buttonId);
+                //remote.PushButton(buttonId);
+                //remote.PushButton(buttonId);
+                //remote.PushButton(buttonId);
+
                 remote.UndoButton(buttonId);
+                //remote.UndoButton(buttonId);
+                //remote.UndoButton(buttonId);
 
                 Console.WriteLine("\n Хотите продолжить (Y/N): ");
                 userInput = Console.ReadLine();

@@ -43,29 +43,5 @@ namespace CommandSample
 
             return sb.ToString();
         }
-
-        //public void DrawMenu()
-        //{
-        //    Console.WriteLine("Выбирете вариант ниже:");
-
-        //    foreach (var buttonId in _commands.Keys)
-        //    {
-        //        Console.WriteLine("{0} \t- {1}", buttonId, _commands[buttonId]);
-        //    }
-
-        //    Console.WriteLine("0 \t- Выход");
-        //    Console.WriteLine();
-        //}
-
-        //public void PerfomAction()
-        //{
-        //    Console.Write("Ваш выбор: ");
-        //    input = Console.ReadLine();
-
-        //    if (_commands.ContainsKey(input))
-        //        _commands[input].Execute();
-        //}
-
-
     }
 }

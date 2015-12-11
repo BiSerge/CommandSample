@@ -45,6 +45,7 @@
   <ItemGroup>
     <Compile Include="Commands\ICommand.cs" />
     <Compile Include="Commands\LightCommand.cs" />
+    <Compile Include="Commands\MacroCommand.cs" />
     <Compile Include="Commands\MusicCommand.cs" />
     <Compile Include="Commands\TeapodCommand.cs" />
     <Compile Include="Commands\TvCommand.cs" />
