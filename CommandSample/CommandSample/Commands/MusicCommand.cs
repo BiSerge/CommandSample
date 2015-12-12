@@ -1,5 +1,4 @@
-﻿using System;
-using CommandSample.ControlledSystems;
+﻿using CommandSample.ControlledSystems;
 
 namespace CommandSample.Commands
 {

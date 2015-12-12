@@ -1,14 +1,11 @@
-﻿using System;
-using System.Collections.Generic;
-using CommandSample.Commands;
+﻿using System.Collections.Generic;
 using System.Text;
+using CommandSample.Commands;
 
 namespace CommandSample
 {
     class RemoteControl
     {
-        //public string input = "";
-
         private Dictionary<int, ICommand> _commands;
 
         public RemoteControl()

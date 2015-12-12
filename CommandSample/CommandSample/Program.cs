@@ -1,8 +1,5 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using CommandSample.Commands;
 using CommandSample.ControlledSystems;
 
@@ -49,8 +46,7 @@ namespace CommandSample
 
                 Console.WriteLine("\n Хотите продолжить (Y/N): ");
                 userInput = Console.ReadLine();
-                //Console.WriteLine();
-            } while (userInput == "y"); //while (userInput == "y");
+            } while (userInput == "y");
         }
     }
 }

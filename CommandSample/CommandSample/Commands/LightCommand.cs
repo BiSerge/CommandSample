@@ -1,20 +1,17 @@
-﻿using System;
+﻿using System.Collections.Generic;
 using CommandSample.ControlledSystems;
-using System.Collections.Generic;
 
 namespace CommandSample.Commands
 {
     public class LightCommand : ICommand
     {
         private Light _light;
-        //private LightState _previosState;
         private Stack<LightState> _states;
 
         public LightCommand(Light light)
         {
             _light = light;
             _states = new Stack<LightState>();
-            //_previosState = LightState.Off;
         }
 
         public void Execute()
@@ -33,6 +30,5 @@ namespace CommandSample.Commands
         {
             return "Включить свет";
         }
-
     }
 }
