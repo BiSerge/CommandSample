@@ -9,7 +9,7 @@ namespace CommandSample.Commands
 
         public TeapodCommand(Teapod teapod)
         {
-            teapod = _teapod;
+            _teapod = teapod;
         }
 
         public void Execute()
